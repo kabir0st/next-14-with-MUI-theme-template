@@ -1,6 +1,6 @@
 'use client'
 import localFont from "next/font/local";
-import { AppBar, Toolbar, Typography, Container, ThemeProvider } from "@mui/material";
+import { AppBar, Toolbar, Typography, Container, ThemeProvider, Button } from "@mui/material";
 import { useState } from "react";
 import NavBar from "@/globalComponents/navBar";
 import theme from "@/theme"; // Assuming this is where the MUI theme is imported
@@ -32,15 +32,17 @@ export default function RootLayout({ children }) {
           className={`${geistSans.variable} ${geistMono.variable} antialiased ${isDarkMode ? "dark" : ""
             }`}
         >
-          {/* AppBar with glassmorphism */}
-          <AppBar position="sticky" className="bg-glass-light dark:bg-glass-dark backdrop-filter backdrop-blur rounded-xl shadow-glass">
-            <Toolbar>
-              <NavBar />
-              <Typography variant="h6" className="ml-4 text-light-text dark:text-dark-text">
-                Frames NP
-              </Typography>
-            </Toolbar>
-          </AppBar>
+          <div className="bg-glass-light dark:bg-glass-dark">
+            <AppBar position="sticky" className="bg-glass-light dark:bg-glass-dark backdrop-filter backdrop-blur rounded-xl shadow-glass">
+              <Toolbar>
+                <Typography variant="h6" className="ml-4 text-light-text dark:text-dark-text">
+                  Frames NP
+                </Typography>
+                <Button onClick={toggleTheme}> Toggle</Button>
+              </Toolbar>
+            </AppBar>
+          </div>
+
 
           {/* Main Content */}
           <main className="min-h-screen py-10 bg-light-background dark:bg-dark-background">
@@ -48,7 +50,7 @@ export default function RootLayout({ children }) {
           </main>
 
           {/* Footer */}
-          <footer className="bg-light-primary dark:bg-dark-primary text-light-text dark:text-dark-text py-4">
+          <footer className=" bg-light-background dark:bg-dark-background  text-light-text dark:text-dark-text py-4">
             <Container>
               <Typography variant="body2" className="text-center">
                 © {new Date().getFullYear()} Frames NP. All rights reserved.
