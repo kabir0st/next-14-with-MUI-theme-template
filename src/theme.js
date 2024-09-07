@@ -1,5 +1,4 @@
-import { createTheme } from '@material-ui/core/styles';
-import { alpha } from '@material-ui/core/styles';
+import { alpha, createTheme } from '@mui/material/styles';
 
 const glassMorphism = {
     backdropFilter: 'blur(10px)',
