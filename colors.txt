@@ -1,0 +1,14 @@
+
+For light theme 
+text: #4c3b34
+background: #f2e9d9
+Primary: #277c7c
+Secondary: #f28f78
+Accent: #ffb84d
+
+For Dark Theme
+text: #cbbab3
+background: #261d0d
+Primary: #83d8d8
+Secondary: #87240d
+Accent: #b36b00
